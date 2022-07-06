@@ -33,7 +33,11 @@ Event.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-                isNumeric: true
+                isInt: true
+            },
+            references: {
+                model: 'User',
+                key: 'id'
             }
         }
     },

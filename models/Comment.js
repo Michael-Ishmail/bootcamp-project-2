@@ -17,13 +17,21 @@ Comment.init(
             allowNull: false,
             validate: {
                 isInt: true
+            },
+            references: {
+                model: 'User',
+                key: 'id'
             }
         },
-        post_id: {
+        event_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 isInt: true
+            },
+            references: {
+                model: 'Event',
+                key: 'id'
             }
         }
     },
